@@ -12,11 +12,13 @@ mycursor = mydb.cursor()
 #Create the DB (if not already exists)
 mycursor.execute("CREATE DATABASE IF NOT EXISTS MARVEL")
 
+mycursor.execute("DROP TABLE IF EXISTS  MARVEL.Marvel_Characters")
+
 #Create the table for the csv data (if not exists)
 mycursor.execute("""
   CREATE TABLE IF NOT EXISTS MARVEL.Marvel_Characters (
     IB INTEGER PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(50),
+    name Text,
     ID VARCHAR(50),
     ALIGN VARCHAR(50),
     EYE VARCHAR(30),
@@ -44,7 +46,7 @@ for i,row in clash_data.iterrows():
     #here %S means string values 
     sql = "INSERT INTO MARVEL.Marvel_Characters (name, ID, ALIGN, EYE, HAIR, SEX, GSM, ALIVE, APPEARANCES, FIRST_APPEARANCE, Year) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
     cursor.execute(sql, tuple(row))
-    print("Record inserted")
+   
     # the connection is not auto committed by default, so we must commit to save our changes
     mydb.commit()
 
