@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <title>Marvel</title>
-</head>    
-<body> 
-    <h1>Marvel Characters</h1>
-    {% for item in personaggi %}
-        <p> {{item}} </p>
+</head>   
+<body>
+    <img src="../static/images/aa.jpg" alt="Logo" width="400">
+    {% for item in personaggi%}
+        <p>
+            Character name: {{ item[1] }}
+        </p>
+        <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="200">
     {% endfor %}
 </body>
 </html>

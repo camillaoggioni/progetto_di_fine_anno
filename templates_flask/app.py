@@ -16,6 +16,6 @@ app = Flask(__name__)
 
 @app.route('/personaggi')
 def personaggList():
-    mycursor.execute("SELECT * FROM Marvel_Characters")
+    mycursor.execute("SELECT * FROM Marvel_Characters limit 20")
     myresult= mycursor.fetchall()
     return render_template('marvel_personaggi.html', personaggi=myresult)
