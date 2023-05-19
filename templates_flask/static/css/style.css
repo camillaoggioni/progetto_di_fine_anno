@@ -1,0 +1,22 @@
+.titolo {
+    transform: scale(1.2);
+    display: flex;
+    justify-content: center;
+}
+
+.nome {
+    font-size: 35px;
+    font-family: fantasy;
+    display: flex;
+    justify-content: center;
+}
+
+.foto {
+    display: flex;
+    justify-content: center;
+}
+.dati {
+    
+    display: flex;
+    justify-content: left;
+}
