@@ -16,7 +16,12 @@
     justify-content: center;
 }
 .dati {
-    
+    font-size: 20px;
     display: flex;
     justify-content: left;
+}
+.linea {
+    border-bottom: 4px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }

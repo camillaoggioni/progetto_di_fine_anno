@@ -6,23 +6,32 @@
 </head>   
 <body>
     <div class="titolo">
-    <img src="../static/images/aa.jpg" alt="Logo" width="400">
+        <img src="../static/images/aa.jpg" alt="Logo" width="400">
     </div>
-    {% for item in personaggi%}
-        <p>
-        <div class="nome">
-            {{ item[1] }}
-        </div>
-       <div class="dati">    
-            Identità: {{ item[2] }}
-       </div>
-       <div class="dati2">
-            First appearance: {{ item[10] }}
-        </div> 
-        </p>
-        <div class="foto">
-        <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="200">
+    {% for item in personaggi %}
+        <div class="linea">
+            <div class="nome">
+                {{ item[1] }}
+            </div>
+            <div class="dati">
+                Identità: {{ item[2] }}
+            </div>
+            <div class="dati">
+                Prima apparizione: {{ item[10] }}
+            </div>
+            <div class="foto">
+                <img src="../static/images/{{ item[0] }}.jpg" alt="{{ item[0] }}" width="200">
+            </div>
+            <div class="dati">
+                {{ item[12] }}
+            </div>
         </div>
     {% endfor %}
 </body>
 </html>
+
+
+
+
+
+
