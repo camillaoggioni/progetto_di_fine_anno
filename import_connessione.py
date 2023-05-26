@@ -13,7 +13,7 @@ mycursor = mydb.cursor()
 sql = """
 SELECT Marvel_Characters.name, Marvel_Characters.ID, Marvel_Characters.ALIGN, Marvel_Characters.EYE, Marvel_Characters.HAIR,
        Marvel_Characters.SEX, Marvel_Characters.GSM, Marvel_Characters.ALIVE, Marvel_Characters.APPEARANCES,
-       Marvel_Characters.FIRST_APPEARANCE, Marvel_Characters.Year, Film_Marvel.FILM
+       Marvel_Characters.FIRST_APPEARANCE, Marvel_Characters.Year, Film_Marvel.FILM, Marvel_Characters.IB
 FROM Marvel_Characters
 JOIN Film_Marvel ON Marvel_Characters.name = Film_Marvel.PERSONAGGIO
 """

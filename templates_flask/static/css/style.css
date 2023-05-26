@@ -22,7 +22,15 @@
     justify-content: left;
 }
 .linea {
-    border-bottom: 4px solid black;
+    border-bottom: 4px solid red;
     padding-bottom: 10px;
     margin-bottom: 10px;
+}
+.dati2 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    display:flex;
+    justify-content: right;
+    border: 2px solid black;
+    padding: 10px;
 }

@@ -18,7 +18,8 @@ mycursor.execute("""
   CREATE TABLE IF NOT EXISTS MARVEL.Film_Marvel ( 
     ID INTEGER PRIMARY KEY AUTO_INCREMENT,
     PERSONAGGIO VARCHAR(50),
-    FILM VARCHAR (1000)
+    FILM VARCHAR (1000),
+    ID2 INTEGER
  );""")
 
 mycursor.execute("DELETE FROM MARVEL.Film_Marvel")
@@ -32,7 +33,7 @@ print (len(clash_data.columns))
 for i,row in clash_data.iterrows():
     cursor = mydb.cursor()
     #here %S means string values 
-    sql = "INSERT INTO Film_Marvel (PERSONAGGIO,FILM) VALUES (%s,%s)"
+    sql = "INSERT INTO Film_Marvel (PERSONAGGIO,FILM,ID) VALUES (%s,%s,%s)"
     cursor.execute(sql, tuple(row))
    
     # the connection is not auto committed by default, so we must commit to save our changes

@@ -3,6 +3,7 @@
 <head>
     <title>Marvel</title>
     <link rel="stylesheet" href="../static/css/style.css" >
+    <link rel="icon" type="image/x-icon" href="../static/images/bb.jpg">
 </head>   
 <body>
     <div class="titolo">
@@ -11,19 +12,19 @@
     {% for item in personaggi %}
         <div class="linea">
             <div class="nome">
-                {{ item[1] }}
+                {{ item[0] }}
             </div>
             <div class="dati">
-                Identità: {{ item[2] }}
+                Identità: {{ item[1] }}
             </div>
             <div class="dati">
-                Prima apparizione: {{ item[10] }}
+                Prima apparizione: {{ item[9] }}
             </div>
             <div class="foto">
-                <img src="../static/images/{{ item[0] }}.jpg" alt="{{ item[0] }}" width="200">
+                <img src="../static/images/{{ item[12] }}.jpg" alt="{{ item[12] }}" width="200">
             </div>
-            <div class="dati">
-                {{ item[12] }}
+            <div class="dati2">
+                {{ item[11] }}
             </div>
         </div>
     {% endfor %}
